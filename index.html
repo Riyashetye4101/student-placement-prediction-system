@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% block content %}
+       
+                
+                <div class="box">
+
+                  
+                  <form action="{{ url_for('go') }}" class="form" method="post">
+                   <h5 class="text-center">Enter your details</h5>
+                 
+                    <!-- Progress bar -->
+                    <div class="progressbar">
+                      <div class="progress" id="progress"></div>
+                      
+                      <div
+                        class="progress-step progress-step-active"
+                        data-title="Intro"
+                      ></div>
+                      <div class="progress-step" data-title="Academics"></div>
+                      <div class="progress-step" data-title="Internship"></div>
+                      <div class="progress-step" data-title="Skills"></div>
+                    </div>
+              
+                    <!-- Steps -->
+                    <div class="form-step form-step-active">
+                      <div class="input-group">
+                        <label for="username">User Full Name</label>
+                        <input type="text" name="username" id="username" required/>
+                      </div>
+                      <div class="input-group">
+                        <label for="age">User Age</label>
+                        <input type="text" name="age" id="age" required />
+                      </div>
+                      <div class="input-group">
+                        <label for="gender">select your gender</label>
+                        <select name="gender" id="gender">
+                          <option value="1" >Female</option>
+                          <option value="0">Male</option>
+                          <option value="1">not to reveal</option>
+                        </select>
+                      </div>
+                      <div class="">
+                        <a href="#" class="btn btn-next width-50 ml-auto">Next</a>
+                      </div>
+                    </div>
+                    <div class="form-step">
+                      <div class="input-group">
+                         <label>Select your Stream</label> 
+                          <select  id="stream" name='stream' required>
+                            <option value="0">Electronics And Communication</option>
+                            <option value="1">Computer Science</option>
+                            <option value="2">Information Technology</option>
+                            <option value="3">Mechanical</option>
+                            <option value="4">Electrical</option>
+                            <option value="5">Civil</option>
+                          </select>
+                         
+                      </div>
+                      <!-- <div class="input-group">
+                        <label for="per">10th Percentage</label>
+                        <input type="text" name="per" id="per" required/>
+                      </div>
+                      <div class="input-group">
+                        <label for="hper">12th Percentage</label>
+                        <input type="text" name="hper" id="hper" required/>
+                      </div> -->
+                      <div class="input-group">
+                        <label for="cg">cgpa</label>
+                        <input type="text" name="cgpa" id="cg" required/>
+                      </div>
+                      <div class="btns-group">
+                        <a href="#" class="btn btn-prev">Previous</a>
+                        <a href="#" class="btn btn-next">Next</a>
+                      </div>
+                    </div>
+                    <div class="form-step">
+                      <div class="input-group">
+                        <label for="inter">No. of internships</label>
+                        <input type="text" name="intern_no" id="inter" required />
+                        
+                      </div>
+                      
+                      <div class="input-group">
+                        <label for="type" >Internships done from company type</label>
+                        <select  id="type" name='intern_type' required>
+                          <option value="None">None</option>
+                          <option value="Mnc">Mnc</option>
+                          <option value="Non Mnc">Non Mnc</option>
+                          <option value="Startup or teaching associated">Startup or teaching associated</option>
+                          
+                        </select>
+                      </div>
+                    <div class="input-group">
+                      <label for="benef" >Enter your role:</label>
+                      <input type="text" name="intern_details" id="benef" required />
+                    </div>
+                      <div class="btns-group">
+                        <a href="#" class="btn btn-prev">Previous</a>
+                        <a href="#" class="btn btn-next">Next</a>
+                      </div>
+                    </div>
+                    <div class="form-step">
+                      <div class="input-group">
+                        <label for="skill">Skills</label>
+                      <textarea id="skill" name="skill" rows="4" placeholder="e.g:- java, python"></textarea>
+                      </div>
+                      <div class="input-group">
+                        <label for="back" >History of backlog</label>
+                        <select id="back" name='backlog' required>
+                          <option value="1">Yes</option>
+                          <option value="0">No</option>
+                        </select>
+                    </div>
+                      <div class="btns-group">
+                        <a href="#" class="btn btn-prev">Previous</a>
+                        <input type="submit" value="Submit" class="btn" />
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              
+            
+
+{% endblock %}
+          

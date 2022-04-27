@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="'https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bree+Serif&family=EB+Garamond:ital,wght@0,500;1,800&display=swap'">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700">
+ <style>
+     body {
+    font-family: 'Poppins', sans-serif;
+
+    background: linear-gradient( to right, #ffffb3,#ffe6e6);
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #242c4b;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #242c4b;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.download {
+    background: #fff;
+    color: #7386D5;
+}
+
+a.article,
+a.article:hover {
+    background: #121c44 !important;
+    color: #fff !important;
+}
+
+
+#content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    /* background: url('https://cdn.siasat.com/wp-content/uploads/2021/03/placement.jpg'); */
+    /* background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROoPL_RT4wwj1Ud6SEHqqWXcymrfbimcECSQ&usqp=CAU'); */
+    /* background-repeat: no-repeat  ; */
+    /* background-position: bottom right; */
+    /* background-size: 40% 30%; */
+    
+
+}
+
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
+
+/* form code */
+:root {
+    --primary-color: rgb(11, 78, 179);
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  .box {
+    font-family: Montserrat, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    min-height: 50vh;
+    
+  }
+  /* Global Stylings */
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  input, select, textarea {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+  }
+  
+  .width-50 {
+    width: 50%;
+  }
+  
+  .ml-auto {
+    margin-left: auto;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Progressbar */
+  .progressbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    counter-reset: step;
+    margin: 2rem 0 4rem;
+  }
+  
+  .progressbar::before,
+  .progress {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    background-color: #dcdcdc;
+    z-index: -1;
+  }
+  
+  .progress {
+    background-color: var(--primary-color);
+    width: 0%;
+    transition: 0.3s;
+  }
+  
+  .progress-step {
+    width: 2.1875rem;
+    height: 2.1875rem;
+    background-color: #dcdcdc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .progress-step::before {
+    counter-increment: step;
+    content: counter(step);
+  }
+  
+  .progress-step::after {
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    font-size: 0.85rem;
+    color: #666;
+  }
+  
+  .progress-step-active {
+    background-color: var(--primary-color);
+    color: #f3f3f3;
+  }
+  
+  /* Form */
+  .form {
+    width: clamp(320px, 30%, 430px);
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 0.35rem;
+    padding: 1.5rem;
+    background:rgba(255, 165, 0,0.1);
+    box-shadow: 5px 10px 18px #888888;
+  }
+  
+  .form-step {
+    display: none;
+    transform-origin: top;
+    animation: animate 0.5s;
+  }
+  
+  .form-step-active {
+    display: block;
+  }
+  
+  .input-group {
+    margin: 2rem 0;
+  }
+  
+  @keyframes animate {
+    from {
+      transform: scale(1, 0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1, 1);
+      opacity: 1;
+    }
+  }
+  
+  /* Button */
+  .btns-group {
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .btn {
+    padding: 0.75rem;
+    display: block;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: #f3f3f3;
+    text-align: center;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .btn:hover {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+  }
+
+  /* about us page */
+  
+
+body {
+background: #DFC2F2;
+	background-image: linear-gradient( to right, #ffffb3,#ffe6e6);
+	background-attachment: fixed;	
+	background-size: cover;
+  
+	}
+
+#container{
+	box-shadow: 0 15px 30px 1px grey;
+	background: rgba(255, 255, 255, 0.90);
+	text-align: center;
+	border-radius: 5px;
+	overflow: hidden;
+	margin: 5em auto;
+	height: 70%;
+	width: 60%;
+  
+	
+}
+
+
+
+.product-details {
+	position: relative;
+	text-align: left;
+	/* overflow: hidden; */
+	padding: 30px;
+	height: 100%;
+	float: left;
+	width: 40%;
+
+}
+
+.data-1{
+  position: relative;
+  text-align: left;
+  padding: 30px;
+  height: 100%;
+  float: left;
+
+}
+
+#container .product-details h1{
+	font-family: 'Bebas Neue', cursive;
+	display: inline-block;
+	position: relative;
+	font-size: 30px;
+	color: #344055;
+	margin: 0;
+	
+}
+
+#container .product-details h1:before{
+	position: absolute;
+	content: '';
+	right: 0%; 
+	top: 0%;
+	transform: translate(25px, -15px);
+	font-family: 'Bree Serif', serif;
+	display: inline-block;
+	background: #ffe6e6;
+	border-radius: 5px;
+	font-size: 14px;
+	padding: 5px;
+	color: white;
+	margin: 0;
+	animation: chan-sh 6s ease infinite;
+
+}
+
+
+
+	
+
+
+.hint-star {
+	display: inline-block;
+	margin-left: 0.5em;
+	color: gold;
+	width: 50%;
+}
+
+
+#container .product-details > p {
+font-family: 'EB Garamond', serif;
+	text-align: center;
+	font-size: 18px;
+	color: #7d7d7d;
+	
+}
+.control{
+	position: absolute;
+	bottom: 20%;
+	left: 22.8%;
+	
+}
+
+
+
+
+
+
+
+.product-image {
+	transition: all 0.3s ease-out;
+	/* display: inline-block; */
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	float: right;
+	width: 45%;
+	
+}
+
+#container img {width: 100%;height: 100%;}
+
+.info {
+    background: rgba(27, 26, 26, 0.9);
+    font-family: 'Bree Serif', serif;
+    transition: all 0.3s ease-out;
+    transform: translateX(-100%);
+    position: absolute;
+    line-height: 1.8;
+    text-align: left;
+    font-size: 105%;
+    cursor: no-drop;
+    color: #FFF;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.info h2 {text-align: center}
+.product-image:hover .info{transform: translateX(0);}
+
+.info ul li{transition: 0.3s ease;}
+.info ul li:hover{transform: translateX(50px) scale(1.3);}
+
+
+ </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Student Placement Prediction</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <div class="sidebar-header">
+                    <h5 margin-left="10">Hello Student</h5>
+
+                    
+                <li>
+                    <a href="{{ url_for('aboutus') }}">About us</a>
+                </li>
+                
+                <li>
+                    <a href="{{ url_for('home') }}">Home</a>
+                </li>
+                <li>
+                    <a href="mailto:riyashetye4101@gmail.com">Contact</a>
+                </li>
+                </div>
+                
+                
+            </ul>
+
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                      <h5>  Welcome to our site</h5>
+                    
+                    
+                </div>
+            </nav> -->
+            {% block content %}
+
+                    {% endblock %}
+        </div>
+          
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<script>
+     const prevBtns = document.querySelectorAll(".btn-prev");
+const nextBtns = document.querySelectorAll(".btn-next");
+const progress = document.getElementById("progress");
+const formSteps = document.querySelectorAll(".form-step");
+const progressSteps = document.querySelectorAll(".progress-step");
+
+let formStepsNum = 0;
+
+nextBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    formStepsNum++;
+    updateFormSteps();
+    updateProgressbar();
+  });
+});
+
+prevBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    formStepsNum--;
+    updateFormSteps();
+    updateProgressbar();
+  });
+});
+
+function updateFormSteps() {
+  formSteps.forEach((formStep) => {
+    formStep.classList.contains("form-step-active") &&
+      formStep.classList.remove("form-step-active");
+  });
+
+  formSteps[formStepsNum].classList.add("form-step-active");
+}
+
+function updateProgressbar() {
+  progressSteps.forEach((progressStep, idx) => {
+    if (idx < formStepsNum + 1) {
+      progressStep.classList.add("progress-step-active");
+    } else {
+      progressStep.classList.remove("progress-step-active");
+    }
+  });
+
+  const progressActive = document.querySelectorAll(".progress-step-active");
+
+  progress.style.width =
+    ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
+}
+</script>
+</html>
